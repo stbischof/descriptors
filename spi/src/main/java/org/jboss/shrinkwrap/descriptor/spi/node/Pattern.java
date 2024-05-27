@@ -51,7 +51,7 @@ final class Pattern {
      * @throws IllegalArgumentException
      *             If the name is not specified
      */
-    public Pattern(final String name) throws IllegalArgumentException {
+    Pattern(final String name) throws IllegalArgumentException {
         // Precondition check
         if (name == null || name.trim().length() == 0) {
             throw new IllegalArgumentException("name must be specified");

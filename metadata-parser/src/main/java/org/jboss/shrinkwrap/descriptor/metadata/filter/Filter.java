@@ -26,5 +26,5 @@ import org.w3c.dom.traversal.TreeWalker;
  * @author <a href="mailto:ralf.battenfeld@bluewin.ch">Ralf Battenfeld</a>
  */
 public interface Filter {
-    boolean filter(final Metadata metadata, final TreeWalker walker);
+    boolean filter(Metadata metadata, TreeWalker walker);
 }
