@@ -104,39 +104,6 @@
         </configuration>
       </plugin>
 
-      <!-- Enforce Maven Environment -->
-      <plugin>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-maven-environment</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <rules>
-            <requireMavenVersion>
-              <version>[2.2.0,)</version>
-              <!-- Must be more that 2.2 to support Assembly "includeModuleDirectory": 
-                http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html -->
-            </requireMavenVersion>
-            <requireJavaVersion>
-              <version>[1.5.0,)</version> <!-- Must be at least JDK5 -->
-            </requireJavaVersion>
-            <requireProperty>
-              <property>env.JAVA_HOME</property>
-              <message>"JAVA_HOME needs to be set to compile"</message>
-            </requireProperty>
-<!--            <requireProperty>
-              <property>env.JAVA5_HOME</property>
-              <message>"JAVA5_HOME needs to be set to run some tests in the JRE5 runtime"</message>
-            </requireProperty>-->
-          </rules>
-        </configuration>
-      </plugin>
-      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>

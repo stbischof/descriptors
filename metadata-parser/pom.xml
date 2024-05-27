@@ -37,17 +37,6 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <!-- Run in Java5; be build with a JDK6 compiler so ensure we don't
-                        use any JDK6 libs -->
-                    <jvm>${env.JAVA5_HOME}/bin/java</jvm>
-                    <!-- Speeeeeeed -->
-                    <forkMode>once</forkMode>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
 
@@ -127,12 +116,12 @@
             <version>1.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-            <version>1.6.1</version>
-            <scope>test</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.4</version>
+			<scope>test</scope>
+		</dependency>
 
         <dependency>
             <groupId>org.apache.maven.plugin-testing</groupId>
@@ -141,7 +130,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Testing -->
+		<!-- Testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

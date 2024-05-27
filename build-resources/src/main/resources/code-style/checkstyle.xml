@@ -16,8 +16,6 @@
 
     <module name="TreeWalker">
 
-        <property name="cacheFile" value="${checkstyle.cache.file}"/>
-
         <!-- Checks for imports                              -->
         <module name="AvoidStarImport"/>
         <module name="RedundantImport"/>
@@ -37,9 +35,7 @@
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
         <module name="IllegalInstantiation"/>
-        <module name="RedundantThrows">
-            <property name="allowUnchecked" value="true"/>
-        </module>
+        <module name="RedundantModifier"/>
 
         <!-- Miscellaneous other checks.                   -->
         <module name="UpperEll"/>
